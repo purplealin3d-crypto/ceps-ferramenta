@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Localizador de CEP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1><span>🔍</span> Localizador de CEP</h1>
+
+        <div class="inputs">
+            <input id="cidade" type="text" placeholder="Cidade">
+            <input id="estado" type="text" maxlength="2" placeholder="UF">
+        </div>
+
+        <button id="buscar">Buscar CEP</button>
+
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>

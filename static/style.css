@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #1a002e, #090013);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(40, 0, 80, 0.55);
+  border-radius: 22px;
+  padding: 50px 60px;
+  box-shadow: 0 0 80px rgba(200, 80, 255, 0.4),
+              0 0 40px rgba(160, 0, 255, 0.3) inset;
+  backdrop-filter: blur(25px);
+  width: 420px;
+  animation: aparecer 0.6s ease-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+  font-size: 1.8em;
+  color: #e3c3ff;
+  text-shadow: 0 0 20px rgba(200, 80, 255, 0.6);
+  margin-bottom: 30px;
+}
+
+.inputs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+input {
+  padding: 12px 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1em;
+  transition: 0.25s;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 15px #a44eff;
+  border-color: #b865ff;
+}
+
+button {
+  background: linear-gradient(135deg, #7a1fff, #c94bff);
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(190, 0, 255, 0.4);
+  transition: all 0.12s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #d56aff;
+}
+
+button:active {
+  transform: scale(0.92);
+  box-shadow: 0 0 12px #b44fff inset;
+}
+
+#resultado {
+  margin-top: 25px;
+  font-size: 1.1em;
+}
+
+.resultado-cep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 0 18px rgba(180, 70, 255, 0.3);
+  animation: aparecer 0.3s ease-out;
+}
+
+.resultado-cep span {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #dcb8ff;
+}
+
+.resultado-cep button {
+  background: linear-gradient(135deg, #6b00ff, #9d3cff);
+  border: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.resultado-cep button:active {
+  transform: scale(0.9);
+  background: #b347ff;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.4);
+}
+
+.loading {
+  color: #b77cff;
+  font-style: italic;
+  margin-top: 10px;
+}
