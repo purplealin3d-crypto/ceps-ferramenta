@@ -141,7 +141,8 @@ def salvar():
         return jsonify({"success": True, "message": msg, "cep": cep})
     except Exception as e:
         return jsonify({"success": False, "message": f"Falha ao salvar: {e}"}), 500
-
 if __name__ == "__main__":
-    print("🚀 Servidor iniciado — acesse http://127.0.0.1:5000")
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 10000))  # Render define a porta
+    print(f"🚀 Servidor iniciado — rodando na porta {port}")
+    app.run(host="0.0.0.0", port=port)
